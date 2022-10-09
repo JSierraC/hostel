@@ -4,8 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Hotel;
-use App\Models\Cliente;
+use App\Models\{Hotel,Cliente,Habitacion, Reserva, User};
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,7 +19,9 @@ class DatabaseSeeder extends Seeder
         
         Hotel::factory(2)->create();
         Cliente::factory(10)->create();
-
+        User::factory(10)->create();
+        Habitacion::factory(100)->create();
+        Reserva::factory(200)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
