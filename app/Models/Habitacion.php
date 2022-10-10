@@ -10,4 +10,7 @@ class Habitacion extends Model
     use HasFactory;
     protected $table = 'habitaciones';
 
+    public function hotel(){
+        return $this->belongsTo('\App\Models\Hotel','hotel_id');
+    }
 }

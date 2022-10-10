@@ -11,13 +11,13 @@
 	<!-- GOOGLE FONT -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:500,700" rel="stylesheet">
 	<!-- FONTAWESOME ICONS -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 	<!-- ALL CSS FILES -->
-	<link href="css/materialize.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('css/materialize.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
 	<!-- RESPONSIVE.CSS ONLY FOR MOBILE AND TABLET VIEWS -->
-	<link href="css/responsive.css" rel="stylesheet">
+	<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -34,7 +34,7 @@
 		<div class="mm">
 			<div class="mm-inn">
 				<div class="mm-logo">
-					<a href="index.html"><img src="images/logo.png" alt="3">
+					<a href="{{route('home')}}"><img src="{{ asset('images/logo.png') }}" alt="3">
 					</a>
 				</div>
 				<div class="mm-icon"><span><i class="fa fa-bars show-menu" aria-hidden="true"></i></span>
@@ -51,11 +51,11 @@
 	</section>
 	<section class="home-block">
 		<!--TOP SECTION-->
-		<div class="menu-section 1">
+		<div class="menu-section">
 			<div class="container">
 				<div class="row">
 					<div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt="1" />
+						<a href="{{route('home')}}"><img src="{{ asset('images/logo.png') }}" alt="1" />
 						</a>
 					</div>
 					<div class="menu-bar">
@@ -67,12 +67,14 @@
 				</div>
 			</div>
 		</div>
+		@yield('banner')
+		@yield('disponibilidad')
 		<!--End Check Availability SECTION-->
 		<!--HOTEL ROOMS SECTION-->
 		
 	</section>
 	<!--HEADER SECTION-->
-	@include('partials.habitaciones')
+	@yield('container')
 	<!--END HEADER SECTION-->
 	<section class="copy">
 		<div class="container">
@@ -80,13 +82,13 @@
 		</div>
 	</section>
 	<!--ALL SCRIPT FILES-->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-ui.js"></script>
-	<script src="js/angular.min.js"></script>
-	<script src="js/bootstrap.js" type="text/javascript"></script>
-	<script src="js/materialize.min.js" type="text/javascript"></script>
-	<script src="js/jquery.mixitup.min.js" type="text/javascript"></script>
-	<script src="js/custom.js"></script>
+	<script src="{{ asset('js/jquery.min.js') }}"></script>
+	<script src="{{ asset('js/jquery-ui.js') }}"></script>
+	<script src="{{ asset('js/angular.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/materialize.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/jquery.mixitup.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/custom.js') }}"></script>
 </body>
 
 </html>

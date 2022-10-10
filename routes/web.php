@@ -13,14 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HotelController::class , 'index'])->name('home');
+Route::get('/detalle/{id}', [App\Http\Controllers\HotelController::class , 'detalle'])->name('detalle');
+
+Route::get('admin/',[App\Http\Controllers\AdminController::class, 'index' ])->name('admin.index');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/master', function () {
-    return view('layouts.master');
-});
