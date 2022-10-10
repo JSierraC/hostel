@@ -204,7 +204,7 @@ th {
 }
 .menu-section {
     padding: 10px 0px;
-    background: #2a2b33;
+    background: #0693e3;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.52);
     position: fixed;
     width: 100%;
@@ -215,7 +215,7 @@ th {
     float: left;
     width: 20%;
 }
-.logo img {} .menu-bar {
+.logo img { float: left; } .menu-bar {
     float: left;
     width: 80%;
 }
@@ -1719,25 +1719,25 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     overflow: hidden;
     margin-top: 72px;
     margin-bottom: 55px;
-    background: linear-gradient(to top, #273237 14%, #f3354e 66%);
+    background: #ffffff;
 }
 .db-left {
     float: left;
-    width: 20%;
+    width: 15%;
     /* background: linear-gradient(to top, #3a5b63 14%, #375874 66%); */
 }
 .db-cent {
     float: left;
-    width: 60%;
+    width: 70%;
     background: #fff;
 }
 .db-righ {
     float: left;
-    width: 20%;
+    width: 15%;
 }
 .db-left-1 {
     padding: 116px 50px 30px 50px;
-    background: url('../images/user.jpg') no-repeat center center;
+    background-color: #ffffff; 
     background-size: cover;
     position: relative;
     /* overflow: hidden; */
@@ -1745,7 +1745,6 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
 .db-left-1:before {
     content: '';
     position: absolute;
-    background: linear-gradient(to top, rgba(18, 20, 22, 0.87) 14%, rgba(0, 0, 0, 0.13) 66%);
     top: 0px;
     bottom: 0px;
     left: 0px;
@@ -1940,6 +1939,13 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+.db-2-main-2 h4 {
+    color: #f93650;
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
 .db-cent-2 {
     position: relative;
     overflow: hidden;

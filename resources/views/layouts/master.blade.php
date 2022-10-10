@@ -34,7 +34,7 @@
 		<div class="mm">
 			<div class="mm-inn">
 				<div class="mm-logo">
-					<a href="{{route('home')}}"><img src="{{ asset('images/logo.png') }}" alt="3">
+					<a href="{{route('home')}}"><img src="{{ asset('images/lobby-dark.png') }}" alt="3">
 					</a>
 				</div>
 				<div class="mm-icon"><span><i class="fa fa-bars show-menu" aria-hidden="true"></i></span>
@@ -55,15 +55,48 @@
 			<div class="container">
 				<div class="row">
 					<div class="logo">
-						<a href="{{route('home')}}"><img src="{{ asset('images/logo.png') }}" alt="1" />
+						<a href="{{route('home')}}"><img src="{{ asset('images/lobby-dark.png') }}" alt="1" />
 						</a>
-					</div>
-					<div class="menu-bar">
+						<div class="menu-bar">
 						<ul>
-							<li><a href="aminities1.html">Login</a>
-							</li>
+							 @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('admin.ventas') }}">
+                                        Administrador
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                       	 @endguest
 						</ul>
 					</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>

@@ -16,6 +16,11 @@ class HabitacionService {
 		return $habitacion;
 	}
 
+	public  function getAllHabitaciones(){
+		$habitacion  = Habitacion::orderBy('estado')->get();
+		return $habitacion;
+	}
+
 }
 
 ?>
