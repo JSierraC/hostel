@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\HabitacionService;
 
-
 class HotelController extends Controller
 {
     protected $habitacionService;
@@ -24,5 +23,7 @@ class HotelController extends Controller
         $habitacion = $this->habitacionService->getHabitacionById($id);
         return view('habitacion.detalle', compact('habitacion'));
     }
+
+    
 
 }

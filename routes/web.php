@@ -26,7 +26,9 @@ Route::prefix('admin')->group(function () {
             Route::get('ventas', 
             		[App\Http\Controllers\Admin\AdminController::class ,'index'])->name('admin.ventas');
             Route::get('reportes', 
-            		[App\Http\Controllers\Admin\AdminController::class,'create'])->name('admin.reportes');
+            		[App\Http\Controllers\Admin\AdminController::class,'reporteView'])->name('admin.reportes.show');
+            Route::post('reportes', 
+                    [App\Http\Controllers\Admin\AdminController::class,'report'])->name('admin.reportes.generar');
         });
  
     });

@@ -24,6 +24,11 @@ class ReservacionService {
 		$reservaciones  = Reserva::where('estado',$estado)->orderBy('created_at')->paginate(10);
 		return $reservaciones;
 	}
+
+	public function getAllReservacionesByDate($fechaI, $fechaF){
+		$res = Reserva::whereBetween('fecha_inicio', [$fechaI, $fechaF])->where('estado','PAGADA')->get();
+		return $res;
+	}
 	
 }
 
