@@ -1730,6 +1730,8 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     float: left;
     width: 70%;
     background: #fff;
+    margin-top: 69px;
+
 }
 .db-righ {
     float: left;

@@ -29,11 +29,11 @@
 								</div>
 								<div class="row">
 									<div class="input-field col s12 m4 l2">
-										<input type="text" id="from" name="from">
+										<input type="text" id="from2" name="from">
 										<label for="from">Fecha Inicio</label>
 									</div>
 									<div class="input-field col s12 m4 l2">
-										<input type="text" id="to" name="to">
+										<input type="text" id="to2" name="to">
 										<label for="to">Fecha Final</label>
 									</div>
 									<div class="input-field col s12 m4 l2">

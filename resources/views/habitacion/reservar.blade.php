@@ -18,33 +18,33 @@
 								<div class="row">
 									<div class="input-field col s6">
 										<input type="hidden" name="habitacion_id" value="{{$habitacion->id}}">
-										<input type="text" class="validate" name="nombre" value="{{old('nombre','dsd')}}" required>
+										<input type="text" class="validate" name="nombre" value="{{old('nombre','')}}" required>
 										<label>Nombre</label>
 									</div>
 									<div class="input-field col s6">
-										<input type="text" class="validate" name="numero_identificacion" value="{{old('numero_identificacion','ddd')}}" required>
+										<input type="text" class="validate" name="numero_identificacion" value="{{old('numero_identificacion','')}}" required>
 										<label>Numero Identificacion</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="input-field col s6">
-										<input type="text" class="validate" name="celular" value="{{old('celular','dddd')}}" required>
+										<input type="text" class="validate" name="celular" value="{{old('celular','')}}" required>
 										<label>Celular</label>
 									</div>
 									<div class="input-field col s6">
-										<input type="email" class="validate" name="email" value="{{old('email','dddd@email.com')}}" required>
+										<input type="email" class="validate" name="email" value="{{old('email','')}}" required>
 										<label>Email</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="input-field col s6">
-										<input type="text" class="validate" name="nacionalidad" value="{{old('nacionalidad','dddd')}}" required>
+										<input type="text" class="validate" name="nacionalidad" value="{{old('nacionalidad','')}}" required>
 										<label>Pais</label>
 									</div>
 									<div class="input-field col s6">
 										<select class="form-control" name="sexo" required>
 											<option value="">Seleccione Sexo</option>
-											<option value="F" selected>Femenino</option>
+											<option value="F">Femenino</option>
 											<option value="M">Masculino</option>
 											<option value="O">Otro</option>
 										</select>
@@ -57,7 +57,7 @@
 											<option value="">No de adultos</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
-											<option value="3"  selected>3</option>
+											<option value="3">3</option>
 											<option value="4">4</option>
 										</select>
 									</div>
@@ -65,7 +65,7 @@
 										<select class="form-control" name="childrens" style="margin: 10px 0px;">
 											<option value="">No de niños</option>
 											<option value="1">1</option>
-											<option value="2"  selected>2</option>
+											<option value="2">2</option>
 											<option value="3">3</option>
 											<option value="4">4</option>
 										</select>
@@ -73,11 +73,11 @@
 								</div>
 								<div class="row">
 									<div class="input-field col s6">
-										<input type="text" id="from" name="fecha_inicio" value="10/10/2022">
+										<input type="text" id="from" name="fecha_inicio">
 										<label for="from">Dia Llegada</label>
 									</div>
 									<div class="input-field col s6">
-										<input type="text" id="to" name="fecha_fin" value="12/10/2022">
+										<input type="text" id="to" name="fecha_fin">
 										<label for="to">Dia Salida</label>
 									</div>
 								</div>

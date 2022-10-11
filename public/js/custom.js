@@ -90,6 +90,27 @@ $(function() {
             from.datepicker("option", "maxDate", getDate(this));
         });
 
+
+          from2 = $("#from2")
+        .datepicker({
+            defaultDate: "+1w",
+            changeMonth: false,
+            numberOfMonths: 1
+           
+        })
+        .on("change", function() {
+            to.datepicker("option", "minDate", getDate(this));
+        }),
+        to2 = $("#to2").datepicker({
+            defaultDate: "+1w",
+            changeMonth: false,
+            numberOfMonths: 1
+        })
+        .on("change", function() {
+            from.datepicker("option", "maxDate", getDate(this));
+        });
+
+
     function getDate(element) {
         var date;
         try {
