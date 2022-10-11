@@ -22,9 +22,7 @@ $(document).ready(function() {
     $('input#input_text, textarea#textarea1').characterCounter();
     Materialize.updateTextFields();
     $('.collapsible').collapsible();
-    $('.materialboxed').materialbox();
     $('.carousel').carousel();
-    $('select').material_select();
     $('.slider').slider();
     $('.dropdown-button').dropdown({
         inDuration: 300,
@@ -76,7 +74,8 @@ $(function() {
         .datepicker({
             defaultDate: "+1w",
             changeMonth: false,
-            numberOfMonths: 1
+            numberOfMonths: 1,
+            minDate: new Date()
         })
         .on("change", function() {
             to.datepicker("option", "minDate", getDate(this));
@@ -84,7 +83,8 @@ $(function() {
         to = $("#to").datepicker({
             defaultDate: "+1w",
             changeMonth: false,
-            numberOfMonths: 1
+            numberOfMonths: 1,
+            minDate: $("#from").datepicker("getDate")
         })
         .on("change", function() {
             from.datepicker("option", "maxDate", getDate(this));

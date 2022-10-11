@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Reserva extends Model
 {
     use HasFactory;
+    
+    protected $fillable = ['habitacion_id','cliente_id','fecha_inicio','fecha_fin','estado','valor'];
 
     protected $dates = ['fecha_inicio', 'fecha_fin'];
 

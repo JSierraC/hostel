@@ -3427,7 +3427,7 @@ footer ul li a {
 .copy {
     position: relative;
     overflow: hidden;
-    margin-bottom: 56px;
+    margin-bottom: 0px;
     background: #1d2033;
 }
 .copy p {
@@ -3977,7 +3977,9 @@ footer ul li a {
 .tab-space {
     padding: 30px 0px 0px 0px;
 }
-.hp-banner {} .hp-banner img {
+.hp-banner {
+    margin-top: 30px;
+} .hp-banner img {
     width: 100%;
 }
 .check-available {

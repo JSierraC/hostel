@@ -13,8 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use \App\Models\Habitacion;
+
 Route::get('/', [App\Http\Controllers\HotelController::class , 'index'])->name('home');
 Route::get('/detalle/{id}', [App\Http\Controllers\HotelController::class , 'detalle'])->name('detalle');
+Route::get('/reservar/{habitacion}', [App\Http\Controllers\HotelController::class , 'reservar'])->name('reservar.index');
+Route::post('/reservar', [App\Http\Controllers\HotelController::class , 'guardar'])->name('reserva.guardar');
+
     /*
     |--------------------------------------------------------------------------
     | Rutas solo para el usuario autenticados
